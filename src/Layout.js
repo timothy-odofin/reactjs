@@ -8,6 +8,7 @@ import CreateAccount from "./components/account/CreateAccount";
 import UpdateAccount from "./components/account/UpdateAccount";
 import SearchAccount from "./components/account/SearchAccount";
 import ListAccount from "./components/account/ListAccount";
+import MyBlogs from "./pages/blog/blog";
 export default function Layout() {
   return (
     <BrowserRouter>
@@ -18,9 +19,11 @@ export default function Layout() {
         <Link to="account">Account</Link>
         <Link to="transaction">Transaction</Link>
         <Link to="settings">Settings</Link>
+        <Link to="blogs">Blogs</Link>
       </div>
       <div className="content">
         <Routes>
+
           <Route path="customer" element={<Customer />} />
           <Route path="/" element={<Customer />} />
 
@@ -34,6 +37,7 @@ export default function Layout() {
 
             </Route>
           <Route path="settings" element={<Settings />}></Route>
+          <Route path="blogs" element={<MyBlogs />} />
         </Routes>
       </div>
     </BrowserRouter>
